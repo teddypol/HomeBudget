@@ -14,7 +14,7 @@ from dashboard.forms import RegisterForm, UpdateProfileForm
 # Create your views here.
 
 def main(request):
-    return render(request, 'dashboard/main.html')
+    return render(request, 'dashboard/background.html')
 
 
 # Own view for redirecting after changing password

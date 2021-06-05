@@ -21,8 +21,10 @@ from dashboard.views import PasswordsChangeView, UserEditView
 
 favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 logo_view = RedirectView.as_view(url='/static/logo.png', permanent=True)
+background_view = RedirectView.as_view(url='dashboard/static/HomeBudget.jpeg', permanent=True)
 
 urlpatterns = [
+    re_path(r'^background\.jpeg$', background_view),
     re_path(r'^favicon\.ico$', favicon_view),
     re_path(r'^logo\.png$', logo_view),
     path('', views.main, name="main"),
